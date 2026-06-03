@@ -322,3 +322,68 @@
     height: 26px;
   }
 }
+
+/* ── Sectors Section Dark Theme (Premium Redesign) ── */
+#setores {
+  background: linear-gradient(135deg, var(--color-surface-dark) 0%, var(--color-surface-dark-2) 100%) !important;
+  color: var(--color-text-inverse);
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#setores .section-label {
+  color: var(--color-accent) !important;
+}
+
+#setores h2 {
+  color: var(--color-text-inverse) !important;
+}
+
+#setores .section-subtitle {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Glassmorphism Sector Badges */
+#setores .sector-badge {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: all var(--duration-normal) var(--ease-out) !important;
+}
+
+#setores .sector-badge:hover {
+  background: rgba(18, 145, 106, 0.1) !important;
+  border-color: var(--color-primary-light) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(18, 145, 106, 0.3) !important;
+}
+
+#setores .sector-badge .sector-icon {
+  background: rgba(18, 145, 106, 0.15) !important;
+  transition: all var(--duration-normal) var(--ease-out) !important;
+}
+
+#setores .sector-badge:hover .sector-icon {
+  background: var(--color-primary) !important;
+}
+
+#setores .sector-badge .sector-icon svg {
+  stroke: var(--color-primary-light) !important;
+  transition: all var(--duration-normal) var(--ease-out) !important;
+}
+
+#setores .sector-badge:hover .sector-icon svg {
+  stroke: var(--color-text-inverse) !important;
+  transform: scale(1.08) !important;
+}
+
+#setores .sector-badge span {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all var(--duration-normal) var(--ease-out) !important;
+}
+
+#setores .sector-badge:hover span {
+  color: var(--color-text-inverse) !important;
+  font-weight: var(--fw-semibold) !important;
+}
