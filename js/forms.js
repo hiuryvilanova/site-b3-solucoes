@@ -115,7 +115,11 @@ function showSuccess(form) {
   submitBtn.disabled = true;
 
   // Show premium success toast alert
-  showToast('Mensagem enviada com sucesso! Retornaremos o contato em breve.', 'success');
+  if (form.classList.contains('newsletter-form')) {
+    showToast('Inscrição realizada com sucesso! Você receberá nossas atualizações.', 'success');
+  } else {
+    showToast('Mensagem enviada com sucesso! Retornaremos o contato em breve.', 'success');
+  }
 
   // Reset form
   setTimeout(() => {

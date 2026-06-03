@@ -647,16 +647,21 @@
   box-shadow: var(--shadow-xs);
   overflow: hidden;
   border: 1px solid var(--color-border-light);
-  transition: var(--transition-base);
+  border-left: 4px solid transparent;
+  transition: all var(--duration-normal) var(--ease-out);
 }
 
 .accordion-item:hover {
-  border-color: var(--color-primary-lighter);
+  transform: translateY(-2px);
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-md);
 }
 
 .accordion-item.active {
   box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-surface) 0%, rgba(var(--color-primary-rgb), 0.02) 100%);
 }
 
 .accordion-trigger {
@@ -680,13 +685,24 @@
 }
 
 .accordion-trigger .accordion-icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-alt);
+  color: var(--color-text-secondary);
   flex-shrink: 0;
-  transition: transform var(--duration-normal) var(--ease-out);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.accordion-item:hover .accordion-trigger .accordion-icon {
+  background: var(--color-primary-lighter);
+  color: var(--color-primary);
 }
 
 .accordion-item.active .accordion-trigger .accordion-icon {
+  background: var(--color-primary);
+  color: white;
   transform: rotate(180deg);
 }
 
@@ -726,11 +742,22 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
-  padding: 4px 12px;
+  padding: 6px 14px;
   font-size: var(--fs-small);
-  background: var(--color-surface-alt);
+  font-weight: var(--fw-medium);
+  background: var(--color-primary-lighter);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.08);
   border-radius: var(--radius-full);
-  color: var(--color-text-secondary);
+  color: var(--color-primary-dark);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.accordion-content-inner ul li:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(var(--color-primary-rgb), 0.15);
 }
 
 /* Trust Bar */

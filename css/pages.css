@@ -193,7 +193,11 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: var(--transition-fast);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.accordion-item:hover .service-icon {
+  background: var(--color-primary-light);
 }
 
 .accordion-item.active .service-icon {
@@ -204,18 +208,26 @@
   width: 24px;
   height: 24px;
   stroke: var(--color-primary);
-  stroke-width: 1.5;
+  stroke-width: 1.8;
   fill: none;
-  transition: var(--transition-fast);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.accordion-item:hover .service-icon svg {
+  stroke: var(--color-text-inverse);
+  transform: scale(1.1);
 }
 
 .accordion-item.active .service-icon svg {
-  stroke: white;
+  stroke: var(--color-text-inverse);
 }
 
 .service-accordion .accordion-content-inner {
   padding: 0 var(--space-8) var(--space-8);
   padding-left: calc(var(--space-8) + 48px + var(--space-4));
+  border-top: 1px solid rgba(var(--color-primary-rgb), 0.08);
+  padding-top: var(--space-6);
+  margin-top: var(--space-2);
 }
 
 @media (max-width: 768px) {

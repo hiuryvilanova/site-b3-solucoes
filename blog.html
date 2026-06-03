@@ -193,16 +193,20 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ CTA ═══════════════════ -->
+    <!-- ═══════════════════ CTA (Newsletter) ═══════════════════ -->
     <section class="cta-section">
       <div class="container">
-        <div class="cta-contact reveal">
+        <div class="section-header centered reveal">
           <h2>Quer receber nossas atualizações?</h2>
-          <p>Acompanhe o blog da B3 Soluções para novidades sobre legislação ambiental e boas práticas.</p>
-          <div class="btn-group">
-            <a href="contato.html" class="btn btn-white btn-lg">Falar com Especialista</a>
-            <a href="contato.html" class="btn btn-outline-white btn-lg">Solicitar Proposta</a>
-          </div>
+          <p class="section-subtitle" style="color: var(--color-text-on-dark)">Acompanhe o blog da B3 Soluções para novidades sobre legislação ambiental e boas práticas.</p>
+          
+          <form class="newsletter-form" data-validate style="margin: 2.5rem auto 0; max-width: 500px; display: flex; gap: var(--space-3);">
+            <div class="form-group" style="flex: 1; margin-bottom: 0;">
+              <label for="newsletter-email" class="sr-only">E-mail</label>
+              <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="Seu e-mail profissional" required style="width: 100%; border-radius: var(--radius-md); padding: 14px 20px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--color-text-inverse); outline: none;">
+            </div>
+            <button type="submit" class="btn btn-white" style="flex-shrink: 0; padding: 14px 28px;">Inscrever-se</button>
+          </form>
         </div>
       </div>
     </section>
